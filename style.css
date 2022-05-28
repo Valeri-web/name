@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* КОНТЕЙНЕР МЕНЮ - ТУТ ВОЗМОЖНО ОШИБКИ */
+.menu {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between; /*заменить*/
+    align-items: center;/*заменить*/
+    background: #000;
+    z-index: 1000;
+}
+
+/* КОНТЕЙНЕР НАВИГАЦИИ МЕНЮ - ТУТ ВОЗМОЖНО ОШИБКА С НАПРАВЛЕНИЕМ */
+.menu-nav {
+    display: flex;
+    margin-left:30px ;
+    flex-direction: row;/*заменить*/
+}
+.nav-item {
+    margin-left:30px ;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    transition: 0.2s ease-in;
+}
+.nav-item:hover {
+    transform: scale(1.1);
+}
+.logo{
+    transition: 0.2s ease-in;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    padding-top: 70px;
+}
+/* поле изменения порядка левая сторона станет правой, а правая левой*/
+/* ШАПКА ЛЕВАЯ ПОЛОВИНА- ТУТ ВОЗМОЖНА  ОШИБКИ */
+.header-left {
+    width: 50%;
+    order: 2;/*заменить*/
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;/*заменить*/
+}
+
+/* ШАПКА ПРАВАЯ ПОЛОВИНА- ТУТ ВОЗМОЖНЫ  ОШИБКИ */
+.header-right {
+    width: 50%;
+    order: 1;/*заменить*/
+    height: 100%;
+    background: url('img/header-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;/*заменить*/
+    padding: 30px;
+}
+
+/* ШАПКА ЛЕВАЯ ПОЛОВИНА- ТУТ ВОЗМОЖНО ОШИБКА*/
+.header-left-img {
+    width: 40%;/*заменить уменьшить ширину, чтобы могли увеличиваться*/
+    flex-grow: 1;/*заменить чтобы третья картинка увеличилась*/
+    filter: saturate(0);
+}
+.header-pic1 {
+    background: url('img/header-left-1.jpg') center/cover no-repeat;
+}
+.header-pic2 {
+    background: url('img/header-left-2.jpg') center/cover no-repeat;
+}
+.header-pic3 {
+    background: url('img/header-left-3.jpg') center/cover no-repeat;
+}
+
+.header-title {
+    font-size: 120px;
+    color: white;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    font-weight: 900;
+}
+.header-text {
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    text-align: right;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.about {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: #AA4344;
+    padding: 70px 50px;
+}
+
+/* CЕКЦИЯ 2 ОПИСАНИЕ. ЛЕВАЯ ПОЛОВИНА СЕКЦИИ - ТУТ ВОЗМОЖНА ОШИБКА*/
+.about-left {
+   flex-basis: 500px;
+   flex-wrap: wrap;
+   flex-grow: 3;/*увеличить*/
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   /* align-content: flex-end; */
+}
+.about-right {
+    flex-basis: auto;/*чтобы не растягивался по высоте*/
+    flex-grow: 1;/*разрешить увеличиваться или убрать совсем*/
+    height: 100%;
+    padding: 50px;
+}
+.about-header-logo{
+    width: 20%;
+}
+.about-title {
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+    width: 60%;
+    text-align: right;
+}
+.about-text {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 30px;
+    background: #783D3D;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-right-img{
+    width: 100%;
+}
+
+.advantages {
+    padding: 70px 50px;
+    min-height: 100vh;
+    height: fit-content;
+}
+.advantages-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;/*по желанию*/
+}
+.advantages-title-icon {
+    width: 10%;
+}
+.advantages-title-text {
+    font-size: 80px;
+    font-weight: 900;
+    width: 60%;
+}
+.advantages-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+/* CЕКЦИЯ 3 КАРТОЧКИ - ТУТ ВОЗМОЖНА ОШИБКА*/
+.advantages-card {
+    display: flex;
+    justify-content: space-between;
+    background: #783D3D;
+    margin: 30px;
+    /* height: 200px; *//*можно убрать*/
+    padding: 30px;
+    width: 50%;/*две в строчке*/
+    flex-basis: 500px;/*увеличить базовую ширину, после достижения которой будут изменения гроу и т.п*/
+}
+/* CЕКЦИЯ 3 КАРТОЧКИ ВНУТРЕННЕЕ НАПОЛНЕНИЕ - ТУТ ВОЗМОЖНА ОШИБКА*/
+.adv-card-number {
+    font-size: 70px;
+    font-weight: 900;
+    color:#C17272;
+    align-self: flex-start;/*поменять на старт*/
+}
+.adv-card-text {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    align-self: flex-end;/*поменять при желании*/
+}
+/* CЕКЦИЯ 3 КАРТОЧКИ КАЖДАЯ ОТДЕЛЬНО - ТУТ ВОЗМОЖНА ОШИБКА*/
+.card-1 {
+    flex-grow: 1;/*разрешить увеличиваться но не сильно*/
+    order:1;/*спросить кто первый и выстроить от 1 до 4*/
+}
+/* CЕКЦИЯ 3 КАРТОЧКИ КАЖДАЯ ОТДЕЛЬНО - ТУТ ВОЗМОЖНА ОШИБКА*/
+.card-2 {
+    flex-grow: 2;/*меняем*/
+    order:2;/*меняем*/
+}
+/* CЕКЦИЯ 3 КАРТОЧКИ КАЖДАЯ ОТДЕЛЬНО - ТУТ ВОЗМОЖНА ОШИБКА*/
+.card-3 {
+    flex-grow: 2;/*меняем*/
+    order:3;/*меняем*/
+}
+/* CЕКЦИЯ 3 КАРТОЧКИ КАЖДАЯ ОТДЕЛЬНО - ТУТ ВОЗМОЖНА ОШИБКА*/
+.card-4 {
+    flex-grow: 1;/*меняем*/
+    order:4;/*меняем*/
+}
+
+
+.company-info {
+    display: flex;
+    height: 100%;/*vh заменить на %, чтобы все влазило*/
+}
+.company-info-part {
+  
+    position: relative;
+    overflow: hidden;
+}
+.company-info-title {
+    font-size: 80px;
+    color: white;
+    font-weight: 900;
+    word-wrap: break-word;
+    margin: 70px 0;
+}
+.company-info-text {
+    font-size: 50px;
+    color: white;
+    font-size: 700;
+}
+.company-info-text li{
+    margin: 30px 0;
+}
+/* CЕКЦИЯ 4 ПОДСЕКЦИИ - ТУТ ВОЗМОЖНЫ ОШИБКИ*/
+.part1, .part3  {
+    background: url('img/test.PNG') center/cover no-repeat;
+    flex-basis: 300px;/*поменять с 800 на 300*/
+    flex-grow: 1;/*поменять местами значения со шринк*/
+    flex-shrink: 5;/*поменять местами значения с гроу*/
+}
+/* CЕКЦИЯ 4 ПОДСЕКЦИИ - ТУТ ВОЗМОЖНЫ ОШИБКИ*/
+.part2 {
+    padding: 30px;
+    flex-basis: 800px;/*поменять с 300 на 800*/
+    flex-shrink: 1;/*разрешить уменьшаться, но не сильно*/
+    flex-grow: 5;/*центральную часть должно быть хорошо видно*/
+    background-color: black;
+    color: white;
+}
+
+
+
+
+@media(max-width:1200px){
+    .header{
+        flex-direction: column;
+    }
+    .header-left, .header-right{
+        width: 100%;
+    }
+    .about{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .header-title{
+        font-size: 80px;
+    }
+    .header-text{
+        font-size: 50px;
+    }
+    .about-title{
+        font-size: 40px;
+    }
+    .about-text{
+        font-size: 20px;
+    }
+    .advantages-title-text{
+        font-size: 40px;
+    }
+    .advantages-text{
+        font-size: 20px;
+    }
+    .company-info-title {
+        font-size: 40px;
+       
+    }
+    .company-info-text {
+        font-size: 20px;
+    }
+    /* .about-right-img{
+        width: 60%;
+    } */
+}
+@media(max-width:600px){
+    .about, .advantages{
+        padding: 70px 15px;
+    }
+   
+    .menu{
+        padding: 0 15px;
+    }
+    .nav-item{
+        font-size:  14px;
+        margin-left: 15px;
+    }
+    .header-left{
+        display: none;
+    }
+    .header-right{
+        width: 100%;
+    }
+    .header-title{
+        font-size: 60px;
+    }
+    .header-text{
+        font-size: 30px;
+    }
+    .about-title{
+        font-size: 30px;
+    }
+    .about-text{
+        font-size: 16px;
+    }
+    .advantages-title-text{
+        font-size: 30px;
+        text-align: left;
+        width: 80%;
+    }
+    .advantages-text{
+        font-size: 16px;
+    }
+    .adv-card-text{
+        font-size: 20px;
+    }
+    .adv-card-number{
+        font-size: 20px;
+    }
+    .company-info-title {
+        font-size: 30px;
+       
+    }
+    .company-info-text {
+        font-size: 16px;
+    }
+}
